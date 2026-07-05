@@ -45,6 +45,14 @@ The application connects to a Triki device via Bluetooth Low Energy (BLE), inter
 * Windows Bluetooth LE APIs
 * NAudio
 
+## How to run
+
+* Download the ZIP package (Code > Download ZIP)
+* Unzip anywhere
+* Go to the TrikiControl folder and run TrikiControlApp or START.bat
+* The program will automatically minimize to the tray. To set your own keys, click the bottle cap icon.
+* If the program doesn't start, go to the install_env folder and run install_env.bat and try running START.bat again
+
 ## About Triki
 <img src="img/Triki01.jpg" width="400">
 
@@ -103,6 +111,14 @@ Aplikacja łączy się z urządzeniem Triki przez Bluetooth Low Energy (BLE), in
 * Windows Forms
 * Windows Bluetooth LE API
 * NAudio
+
+## Jak uruchomić
+
+* Pobierz paczkę ZIP (Code > Download ZIP)
+* Rozpakuj gdziekolwiek
+* Wejdz do folderu TrikiControl i uruchom TrikiControlApp lub START.bat
+* Program automatycznie zminimalizuje się do tray, aby ustawić własne klawisze kliknij ikonę kapsla.
+* Gdy program się nie uruchomi wejdz do folderu install_env i uruchom install_env.bat i spróbuj ponownie uruchomić START.bat
 
 ## O Triki
 <img src="img/Triki01.jpg" width="400">
