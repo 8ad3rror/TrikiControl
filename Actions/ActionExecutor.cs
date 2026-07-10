@@ -52,19 +52,19 @@ public sealed class ActionExecutor
                 break;
 
           case ActionType.UpArrow:
-                PressKey(VK_UP);
+                PressKey(VK_UP, 3);
                 break;
 
           case ActionType.DownArrow:
-                PressKey(VK_DOWN);
+                PressKey(VK_DOWN, 3);
                 break;
 
           case ActionType.LeftArrow:
-                PressKey(VK_LEFT);
+                PressKey(VK_LEFT, 3);
                 break;
 
           case ActionType.RightArrow:
-                PressKey(VK_RIGHT);
+                PressKey(VK_RIGHT, 3);
                 break;
 
 

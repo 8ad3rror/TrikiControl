@@ -10,7 +10,7 @@ public sealed class GestureDetector
     private DateTimeOffset _gestureStartedAt = DateTimeOffset.MinValue;
     private DateTimeOffset _lastEmittedAt = DateTimeOffset.MinValue;
 
-    private readonly TimeSpan _holdRequired = TimeSpan.FromMilliseconds(100);
+    private readonly TimeSpan _holdRequired = TimeSpan.FromMilliseconds(10);
     private readonly TimeSpan _repeatInterval = TimeSpan.FromMilliseconds(80);
 
     public GestureEvent? Process(ImuSample sample)
@@ -74,17 +74,34 @@ public sealed class GestureDetector
 
         var gyroMagnitude =
             Math.Abs(sample.GyroX) +
-            Math.Abs(sample.GyroY) +
-            Math.Abs(sample.GyroZ);
+            Math.Abs(sample.GyroY);
+            //Math.Abs(sample.GyroZ);
 
-        if (gyroMagnitude > 100)
+        if (gyroMagnitude > 60)
         {
+       
             return new GestureEvent(
                 GestureType.Shake,
                 sample.TimestampUtc,
                 gyroMagnitude);
         }
+/*
+        if (Math.Abs(orientation.Pitch) > 130)
+        {
+            return new GestureEvent(
+                GestureType.FaceUp,
+                sample.TimestampUtc,
+                orientation.Pitch);
+        }
 
+        if (sample.GyroY == -90)
+        {
+            return new GestureEvent(
+                GestureType.FaceDown,
+                sample.TimestampUtc,
+                sample.GyroX);
+        }
+*/
         return null;
     }
 }
